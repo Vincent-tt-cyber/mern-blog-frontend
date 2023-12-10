@@ -28,12 +28,14 @@ export const FullPost = () => {
     return <Post isLoading={isLoading} isFullPost />;
   }
 
+  console.log(`${process.env.REAC_APP_API_URL}${data.imageUrl}`);
+
   return (
     <>
       <Post
         id={data._id}
         title={data.title}
-        imageUrl={data.imageUrl ? `http://localhost:4444${data.imageUrl}` : ""}
+        imageUrl={data.imageUrl ? `${process.env.REAC_APP_API_URL}${data.imageUrl}` : ""}
         user={data.user}
         createdAt={data.createdAt}
         viewsCount={data.viewsCount}
