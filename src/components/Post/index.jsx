@@ -28,7 +28,7 @@ export const Post = ({
   isEditable,
 }) => {
   const dispatch = useDispatch();
-
+  console.log("imageUrl =>", imageUrl);
   if (isLoading) {
     return <PostSkeleton />;
   }
@@ -56,7 +56,7 @@ export const Post = ({
       {imageUrl && (
         <img
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
-          src={`${process.env.REAC_APP_API_URL}/${imageUrl}`}
+          src={imageUrl}
           alt={title}
         />
       )}

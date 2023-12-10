@@ -34,7 +34,7 @@ export const AddPost = () => {
 
       const { data } = await axios.post("/upload", formData);
       setImageUrl(data.url);
-      console.log(data.url);
+      // console.log(data.url);
     } catch (error) {
       return alert("Ошибка при загрузке файла");
     }
@@ -51,7 +51,7 @@ export const AddPost = () => {
   const onSubmit = async () => {
     try {
       setIsLoading(true);
-      console.log(tags);
+      // console.log(tags);
 
       const fields = {
         title,
