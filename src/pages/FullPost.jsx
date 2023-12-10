@@ -10,7 +10,6 @@ export const FullPost = () => {
   const [data, setData] = React.useState();
   const [isLoading, setIsLoading] = React.useState(true);
   const { id } = useParams();
-  console.log(`${process.env.REAC_APP_API_URL}/${data.imageUrl}`);
   React.useEffect(() => {
     axios
       .get(`/posts/${id}`)
@@ -34,7 +33,7 @@ export const FullPost = () => {
         id={data._id}
         title={data.title}
         imageUrl={
-          data.imageUrl ? `${process.env.REAC_APP_API_URL}${data.imageUrl}` : ""
+          data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` || `http:localhost:4444${data.image}` : ""
         }
         user={data.user}
         createdAt={data.createdAt}

@@ -8,7 +8,6 @@ import styles from "./Login.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { fecthAuth, selectIsAuth } from "../../redux/slices/auth";
 import { Navigate } from "react-router-dom";
-import { WifiTetheringErrorRoundedTwoTone } from "@mui/icons-material";
 
 export const Login = () => {
   const isAuth = useSelector(selectIsAuth);
