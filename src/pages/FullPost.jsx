@@ -28,7 +28,7 @@ export const FullPost = () => {
     return <Post isLoading={isLoading} isFullPost />;
   }
 
-  console.log(`${process.env.REAC_APP_API_URL}${data.imageUrl}`);
+  console.log(`${process.env.REAC_APP_API_URL}/${data.imageUrl}`);
 
   return (
     <>
