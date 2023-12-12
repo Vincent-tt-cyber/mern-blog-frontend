@@ -28,7 +28,7 @@ export const Post = ({
   isEditable,
 }) => {
   const dispatch = useDispatch();
-  console.log("imageUrl =>", imageUrl);
+  // console.log("imageUrl =>", imageUrl);
   if (isLoading) {
     return <PostSkeleton />;
   }
