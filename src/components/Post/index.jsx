@@ -53,7 +53,7 @@ export const Post = ({
           </IconButton>
         </div>
       )}
-      {imageUrl && (
+      {imageUrl && isEditable && (
         <img
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
           src={imageUrl}
